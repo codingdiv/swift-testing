@@ -201,7 +201,9 @@
 						</div>
 					</li>
 					<li class="nav-item dropdown">
-						 <input style="margin: 4px 8px; background-color: rgba(255, 255, 255, 0.9); color: black; font-size: inherit;" type="button" id="toggle" value="SUBSCRIBE" />
+						 <a id="toggle" class="nav-link btn btn-sm" style="margin: 4px 8px; background-color: rgba(255, 255, 255, 0.9); color: black;">
+							<p style="font-size: inherit;">SUBSCRIBE</p>
+						 </a>
 					</li>
 					<li class="nav-item">
 						<form class="form-inline ml-auto" autocomplete="off" data-background-color="" method="get" action="/search" onsubmit="return global_search_navigate();">
@@ -776,12 +778,12 @@ add(attachment)</code></pre>
           noSleep.enable(); // keep the screen on!
           wakeLockEnabled = true;
           toggleEl.value = "SUBSCRIBE";
-          $("#toggle").css("background-color","green");
+          $("#toggle > p").css("font-weight","bold");
         } else {
           noSleep.disable(); // let the screen turn off.
           wakeLockEnabled = false;
           toggleEl.value = "SUBSCRIBE";
-          $("#toggle").css("background-color","lightgrey");
+          $("#toggle > p").css("font-weight","normal");
         }
       }, false);
     </script>
